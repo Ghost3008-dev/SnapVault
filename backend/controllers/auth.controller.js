@@ -23,12 +23,14 @@ export const register = async (req, res) => {
       return res.status(400).json({ message: "Email already registered" });
     }
 
+    const safeRole = ["viewer", "club_member", "photographer"].includes(role) ? role : "viewer";
+
     const hashedPassword = await bcrypt.hash(password, 10);
     const user = await User.create({
       name,
       email,
       password: hashedPassword,
-      role,
+      role: safeRole,
     });
 
     res.status(201).json({
