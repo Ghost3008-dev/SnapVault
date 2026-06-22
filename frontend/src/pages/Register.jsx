@@ -106,8 +106,7 @@ const Register = () => {
           padding: "48px 44px",
           width: "100%",
           maxWidth: "420px",
-          boxShadow:
-            "0 20px 50px rgba(0, 0, 0, 0.4)",
+          boxShadow: "0 20px 50px rgba(0, 0, 0, 0.4)",
           border: "1px solid rgba(255, 255, 255, 0.08)",
           backdropFilter: "blur(16px)",
           position: "relative",
@@ -126,7 +125,6 @@ const Register = () => {
         />
 
         <div style={{ textAlign: "center", marginBottom: "36px" }}>
-          
           <h1
             style={{
               fontSize: "28px",
@@ -211,7 +209,6 @@ const Register = () => {
               <option value="Viewer">Viewer</option>
               <option value="ClubMember">Club Member</option>
               <option value="Photographer">Photographer</option>
-              <option value="Admin">Admin</option>
             </select>
           </div>
 
