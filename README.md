@@ -1,197 +1,139 @@
-# SnapVault
+# SnapVault — AI-Powered Event Media Platform
 
-### AI-Powered Event Media Management & Face Recognition Platform
+SnapVault is a full-stack MERN application that lets users discover, organize, and retrieve event photos with real-time social interactions. It simplifies media management for events by providing personalized photo collections and seamless collaboration tools.
 
-SnapVault is a full-stack MERN application that enables users to discover, organize, and retrieve event photos using facial recognition,  and real-time social interactions. The platform simplifies media management for events by automatically identifying users in uploaded photos and providing personalized photo collections.
+**Live Demo:** https://snap-vault2-mvuz.vercel.app/
 
 ---
 
+## Tech Stack
 
-## Features
+- **Frontend:** React.js, Vite, React Router, Axios, Context API
+- **Backend:** Node.js, Express.js, Socket.IO, JWT Authentication, Multer
+- **Database:** MongoDB Atlas, Mongoose
+- **Cloud Storage:** Cloudinary
+- **Deployment:** Vercel (Frontend), Render (Backend)
 
-###  Authentication & Authorization
+---
+
+## Key Features
+
+### Authentication & Authorization
 - Secure user registration and login
-- Role-based access control (veiwer,photographers,admin,club members)
+- Role-based access control (Viewer, Photographer, Club Member, Admin)
 
-###  Event Media Management
+### Event Media Management
 - Create and manage events
-- Upload photos and videos
-- Cloudinary-based media storage
-- Event-wise media organization
+- Upload photos and videos with Cloudinary-based storage
+- Event-wise media organization and filtering
 
-###  Face Recognition
-- User face registration via selfie upload
-- Face embedding generation
-- Automatic face matching in uploaded media
-- Personalized photo retrieval
-
-###  Smart Search
+### Smart Search
 - Search media using tags
-- Event-based filtering
-- Personalized media discovery
+- Event-based and personalized media filtering
 
-###  Social Features
-- Like photos
-- Comment on media
-- Real-time notifications
-- Activity tracking
+### Social Features
+- Like and comment on photos
+- Real-time notifications via Socket.IO
+- Activity tracking and live updates
 
-###  Real-Time Communication
-- Socket.IO integration
-- Instant notifications
-- Live updates for likes and comments
+### Download Management
+- Secure, access-controlled media downloads
 
-###  Download Management
-- Secure media downloads
-- Access-controlled media retrieval
-
-###  Admin Dashboard
+### Admin Dashboard
 - Event moderation
 - User management
 - Media monitoring
 
 ---
 
-# 🏗️ System Architecture
+## Project Structure
+SnapVault/
 
-```text
-                        ┌──────────────┐
-                        │   Frontend   │
-                        │ React + Vite │
-                        └──────┬───────┘
-                               │
-                               │ REST APIs
-                               ▼
-                    ┌────────────────────┐
-                    │ Express.js Backend │
-                    │  Node.js Server    │
-                    └─────────┬──────────┘
-                              │
-       ┌──────────────────────┼──────────────────────┐
-       │                      │                      │
-       ▼                      ▼                      ▼
-
- ┌────────────┐      ┌────────────────┐      ┌─────────────┐
- │ MongoDB    │      │ Cloudinary     │      │ Socket.IO   │
- │ Database   │      │ Media Storage  │      │ Real-Time   │
- └────────────┘      └────────────────┘      └─────────────┘
-                              │
-                              ▼
-                    ┌──────────────────┐
-                    │ Face Recognition │
-                    │ AI Processing    │
-                    └──────────────────┘
-```
-
----
-
-# 📂 Project Structure
-
-```bash
-SnapVault
-│
 ├── frontend/
-│   ├── src/
-│   │   ├── api/
-│   │   ├── assets/
-│   │   ├── components/
-│   │   ├── context/
-│   │   ├── pages/
-│   │   └── hooks/
-│   │
-│   └── public/
+
+│   └── src/
+
+│       ├── api/
+
+│       ├── assets/
+
+│       ├── components/
+
+│       ├── context/
+
+│       ├── pages/
+
+│       └── hooks/
+
 │
+
 ├── backend/
+
 │   ├── controllers/
+
 │   ├── middleware/
+
 │   ├── models/
+
 │   ├── routes/
+
 │   ├── services/
+
 │   ├── utils/
+
 │   └── config/
+
 │
+
 └── README.md
-```
-
 ---
 
-# 🛠️ Tech Stack
+## Getting Started
 
-## Frontend
-- React.js
-- Vite
-- React Router
-- Axios
-- Context API
-- Socket.IO Client
+### Prerequisites
+- Node.js v18+
+- MongoDB (local or Atlas)
+- Cloudinary account
 
-## Backend
-- Node.js
-- Express.js
-- Socket.IO
-- JWT Authentication
-- Multer
-
-## Database
-- MongoDB Atlas
-- Mongoose
-
-## Cloud Services
-- Cloudinary
-- Render
-- Vercel
-
-## AI & Computer Vision
-- Face Recognition
-- Facial Embeddings
-
----
-
-# 🌐 Deployment Architecture
-
-```text
-Frontend (Vercel)
-        │
-        ▼
-Backend (Render)
-        │
-        ▼
-MongoDB Atlas
-        │
-        ▼
-Cloudinary
-```
-
-# 🚀 Local Setup
-
-## Clone Repository
+### Install Dependencies
 
 ```bash
-git clone https://github.com/your-username/snapvault.git
-cd snapvault
-```
-
-## Backend Setup
-
-```bash
+# Backend
 cd backend
-
 npm install
 
-npm run dev
+# Frontend
+cd ../frontend
+npm install
 ```
 
-## Frontend Setup
+### Environment Variables
+
+Create a `.env` file in the `/backend` folder:
+MONGODB_URI=your_mongodb_connection_string
+
+JWT_SECRET=your_jwt_secret
+
+CLOUDINARY_NAME=your_cloudinary_name
+
+CLOUDINARY_API_KEY=your_cloudinary_api_key
+
+CLOUDINARY_API_SECRET=your_cloudinary_api_secret
+
+### Run Locally
 
 ```bash
-cd frontend
+# Start backend
+cd backend
+npm run dev
 
-npm install
-
+# Start frontend
+cd ../frontend
 npm run dev
 ```
+
 ---
 
-# 👨‍💻 Author
+## Author
 
-**Aryan**
+Aryan
