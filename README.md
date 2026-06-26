@@ -47,6 +47,7 @@ SnapVault is a full-stack MERN application that lets users discover, organize, a
 ---
 
 ## Project Structure
+```plaintext
 SnapVault/
 ├── frontend/
 │   └── src/
@@ -65,6 +66,7 @@ SnapVault/
 │   ├── utils/
 │   └── config/
 └── README.md
+```
 ---
 
 ## Getting Started
